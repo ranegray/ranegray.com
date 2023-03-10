@@ -1,5 +1,12 @@
 ---
 const pageTitle = 'About Me'
+const identity = {
+  firstName: "Rane",
+  place: "Denver, CO",
+  occupation: "Frontend Engineer",
+  hobbies: ["running", "programming", "reading"],
+};
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
 <html lang="en">
@@ -17,8 +24,11 @@ const pageTitle = 'About Me'
 
 		<h1>{pageTitle}</h1>
 
-        <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-
+        <p>Hi 👋 my name is {identity.firstName}. I enjoy {identity.hobbies[0]}, {identity.hobbies[1]}, and {identity.hobbies[2]}. I'm a {identity.occupation} located in {identity.place}.</p>
+		
+		<p></p>
+		
         <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+
 	</body>
 </html>
