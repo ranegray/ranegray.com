@@ -1,6 +1,12 @@
 import Link from "next/link";
+import { ReactNode } from "react";
 
-const NavLink = ({ href, children }) => (
+interface NavLinkProps {
+  href: string;
+  children: ReactNode;
+}
+
+const NavLink = ({ href, children }: NavLinkProps) => (
   <Link
     href={href}
     className="text-zinc-600 hover:text-orange-600 transition-colors px-3 py-2"
@@ -9,7 +15,13 @@ const NavLink = ({ href, children }) => (
   </Link>
 );
 
-const ProjectCard = ({ title, description, technologies }) => (
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  technologies: string;
+}
+
+const ProjectCard = ({ title, description, technologies }: ProjectCardProps) => (
   <div className="border border-zinc-200 rounded-lg p-6 hover:border-orange-600 transition-all hover:shadow-md">
     <h3 className="text-xl font-medium text-zinc-900 mb-2">{title}</h3>
     <p className="text-zinc-600 mb-4">{description}</p>
@@ -19,7 +31,12 @@ const ProjectCard = ({ title, description, technologies }) => (
   </div>
 );
 
-const BlogPost = ({ title, excerpt }) => (
+interface BlogPostProps {
+  title: string;
+  excerpt: string;
+}
+
+const BlogPost = ({ title, excerpt }: BlogPostProps) => (
   <div className="mb-6">
     <h3 className="text-lg font-medium text-zinc-900 hover:text-orange-600 transition-colors">
       <a href="#">{title}</a>
