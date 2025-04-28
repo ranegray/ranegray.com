@@ -47,7 +47,7 @@ export default function Home() {
         {/* Hero section */}
         <section className="py-16">
           <h1 className="text-2xl sm:text-4xl font-bold leading-tight mb-4">
-            👋 Hey, I'm Rane — CS @ CU Boulder building open-source tools for humanoid robots.
+            👋 Hey, I&apos;m Rane — CS @ CU Boulder building open-source tools for humanoid robots.
           </h1>
           <p className="text-xl text-zinc-600">
             Working on innovative projects at Correll Lab with the Unitree H1-2 platform to advance human-robot interaction and controls.
