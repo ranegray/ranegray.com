@@ -82,7 +82,7 @@ const blogPosts = [
 const allTags = [...new Set(blogPosts.flatMap(post => post.tags))].sort();
 
 type Props = {
-    params: { slug: string };
+    params: object;
     searchParams: { [key: string]: string | string[] | undefined };
   };
 
