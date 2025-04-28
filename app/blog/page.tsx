@@ -81,14 +81,15 @@ const blogPosts = [
 // All unique tags from the blog posts
 const allTags = [...new Set(blogPosts.flatMap(post => post.tags))].sort();
 
-export default function BlogPage({
-    searchParams
-}: {
-    searchParams: { tag?: string; search?: string }
-}) {
+type Props = {
+    params: { slug: string };
+    searchParams: { [key: string]: string | string[] | undefined };
+  };
+
+  export default function BlogPage({ searchParams }: Props) {
     // Get filter values from URL params
-    const selectedTag = searchParams.tag || '';
-    const searchQuery = searchParams.search || '';
+    const selectedTag = typeof searchParams.tag === 'string' ? searchParams.tag : '';
+    const searchQuery = typeof searchParams.search === 'string' ? searchParams.search : '';
 
     // Filter posts based on URL parameters
     const filteredPosts = blogPosts.filter(post => {
