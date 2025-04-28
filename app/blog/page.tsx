@@ -81,12 +81,7 @@ const blogPosts = [
 // All unique tags from the blog posts
 const allTags = [...new Set(blogPosts.flatMap(post => post.tags))].sort();
 
-type Props = {
-    params: object;
-    searchParams: { [key: string]: string | string[] | undefined };
-  };
-
-  export default async function BlogPage({ searchParams }: Props) {
+export default function BlogPage({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
     // Get filter values from URL params
     const selectedTag = typeof searchParams.tag === 'string' ? searchParams.tag : '';
     const searchQuery = typeof searchParams.search === 'string' ? searchParams.search : '';
