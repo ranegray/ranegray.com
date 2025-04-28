@@ -118,7 +118,7 @@ export default function Home() {
             I build things with computers and robots. Currently studying algorithms, linear algebra, and logic at CU Boulder while working with the Correll Lab on humanoid robotics research.
           </p>
           <p className="text-zinc-600">
-            My focus is developing practical, accessible tools that bridge the gap between advanced robotics research and real-world applications. I'm particularly interested in robot ethics and creating technology that enhances rather than replaces human capabilities.
+            My focus is developing practical, accessible tools that bridge the gap between advanced robotics research and real-world applications. I&apos;m particularly interested in robot ethics and creating technology that enhances rather than replaces human capabilities.
           </p>
         </section>
 
