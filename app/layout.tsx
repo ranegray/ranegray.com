@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Rane Gray | Humanoid Robotics Researcher",
@@ -47,7 +49,7 @@ export default function RootLayout({
             "sameAs": [
               "https://github.com/ranegray",
               "https://linkedin.com/in/ranegray",
-              "https://twitter.com/ranegray"
+              "https://x.com/ranegray_"
             ],
             "jobTitle": "Computer Science Student and Robotics Researcher",
             "worksFor": {
@@ -58,7 +60,9 @@ export default function RootLayout({
         }} />
       </head>
       <body>
+        <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );
