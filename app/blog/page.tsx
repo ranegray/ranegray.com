@@ -86,7 +86,7 @@ type Props = {
     searchParams: { [key: string]: string | string[] | undefined };
   };
 
-  export default function BlogPage({ searchParams }: Props) {
+  export default async function BlogPage({ searchParams }: Props) {
     // Get filter values from URL params
     const selectedTag = typeof searchParams.tag === 'string' ? searchParams.tag : '';
     const searchQuery = typeof searchParams.search === 'string' ? searchParams.search : '';
