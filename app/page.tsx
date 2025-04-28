@@ -1,19 +1,4 @@
-import Link from "next/link";
-import { ReactNode } from "react";
-
-interface NavLinkProps {
-  href: string;
-  children: ReactNode;
-}
-
-const NavLink = ({ href, children }: NavLinkProps) => (
-  <Link
-    href={href}
-    className="text-zinc-600 hover:text-orange-600 transition-colors px-3 py-2"
-  >
-    {children}
-  </Link>
-);
+import Navigation from "./Navigation";
 
 interface ProjectCardProps {
   title: string;
@@ -48,23 +33,14 @@ const BlogPost = ({ title, excerpt }: BlogPostProps) => (
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50">
-      {/* Nav Section */}
-      <header className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <nav className="flex items-center justify-between">
-          <h1 className="text-3xl font-bold">rane<span className="text-orange-500 font-black">.</span></h1>
-          <div className="hidden md:flex items-center">
-              <NavLink href="/">Home</NavLink>
-              <NavLink href="/projects">Projects</NavLink>
-              <NavLink href="/blog">Blog</NavLink>
-              <NavLink href="/about">About</NavLink>
-            </div>
-        </nav>
+      <header>
+        <Navigation />
       </header>
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero section */}
         <section className="py-16">
           <h1 className="text-2xl sm:text-4xl font-bold leading-tight mb-4">
-            👋 Hey, I&apos;m Rane — CS @ CU Boulder building open-source tools for humanoid robots.
+            👋 Hey, I&apos;m Rane Gray — CS student @ CU Boulder building open-source tools for humanoid robots.
           </h1>
           <p className="text-xl text-zinc-600">
             Working on innovative projects at Correll Lab with the Unitree H1-2 platform to advance human-robot interaction and controls.
