@@ -84,9 +84,11 @@ const projects = [
     }
 ];
 
-export default function Projects({ searchParams }: { searchParams: { category?: string } }) {
+export default async function Projects({ searchParams }: { searchParams: Promise<{ category?: string }> }) {
+    // Await for the searchParams promise to resolve
+    const { category } = await searchParams;
     // Get category from URL params or default to 'all'
-    const selectedCategory = searchParams.category || 'all';
+    const selectedCategory = category || 'all';
 
     // Filter projects based on selected category
     const filteredProjects = selectedCategory === 'all'
