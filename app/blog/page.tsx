@@ -81,11 +81,10 @@ const blogPosts = [
 // All unique tags from the blog posts
 const allTags = [...new Set(blogPosts.flatMap(post => post.tags))].sort();
 
-// @ts-ignore
-export default function BlogPage({ searchParams }: { searchParams: { tag?: string; search?: string } }) {
+export default async function BlogPage({ searchParams }: { searchParams: { tag?: Promise<string>; search?: Promise<string> } }) {
     // Get filter values from URL params
-    const selectedTag = searchParams.tag || '';
-    const searchQuery = searchParams.search || '';
+    const selectedTag = await searchParams.tag || '';
+    const searchQuery = await searchParams.search || '';
 
     // Filter posts based on URL parameters
     const filteredPosts = blogPosts.filter(post => {
