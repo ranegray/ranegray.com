@@ -21,9 +21,9 @@ export default function Navigation() {
                     {/* Desktop navigation */}
                     <div className="hidden md:flex items-center">
                         <NavLink href="/">Home</NavLink>
-                        <NavLink href="/projects">Projects</NavLink>
-                        <NavLink href="/blog">Blog</NavLink>
-                        <NavLink href="/about">About</NavLink>
+                        <NavLink href="/">Projects</NavLink>
+                        <NavLink href="/">Blog</NavLink>
+                        <NavLink href="/">About</NavLink>
                     </div>
 
                     {/* Mobile menu button */}

@@ -45,7 +45,7 @@ export default function Home() {
         <section className="py-8 border-t border-zinc-200">
           <div className="flex items-baseline justify-between mb-8">
             <h2 className="text-2xl font-bold">Projects</h2>
-            <a href="/projects" className="text-orange-600 hover:text-orange-700">
+            <a href="/" className="text-orange-600 hover:text-orange-700">
               View all →
             </a>
           </div>
@@ -78,7 +78,7 @@ export default function Home() {
         <section className="py-8 border-t border-zinc-200">
           <div className="flex items-baseline justify-between mb-8">
             <h2 className="text-2xl font-bold">Latest Writing</h2>
-            <a href="/blog" className="text-orange-600 hover:text-orange-700">
+            <a href="/" className="text-orange-600 hover:text-orange-700">
               View all →
             </a>
           </div>
