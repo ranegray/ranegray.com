@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -45,9 +47,9 @@ export default function Home() {
         <section className="py-8 border-t border-zinc-200">
           <div className="flex items-baseline justify-between mb-8">
             <h2 className="text-2xl font-bold">Projects</h2>
-            <a href="/" className="text-orange-600 hover:text-orange-700">
+            <Link href="/" className="text-orange-600 hover:text-orange-700">
               View all →
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -78,9 +80,9 @@ export default function Home() {
         <section className="py-8 border-t border-zinc-200">
           <div className="flex items-baseline justify-between mb-8">
             <h2 className="text-2xl font-bold">Latest Writing</h2>
-            <a href="/" className="text-orange-600 hover:text-orange-700">
+            <Link href="/" className="text-orange-600 hover:text-orange-700">
               View all →
-            </a>
+            </Link>
           </div>
 
           <div>
