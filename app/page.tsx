@@ -105,7 +105,7 @@ export default function Home() {
         <section className="py-8 border-t border-zinc-200">
           <h2 className="text-2xl font-bold mb-4">About</h2>
           <p className="text-zinc-600 mb-4">
-            I build things with computers and robots. Currently studying algorithms, linear algebra, and logic at CU Boulder while working with the Correll Lab on humanoid robotics research.
+            I build things with computers and robots. Currently studying data science, probability and statistics, and ethics of AI at CU Boulder while working with the Correll Lab on humanoid robotics research.
           </p>
           <p className="text-zinc-600">
             My focus is developing practical, accessible tools that bridge the gap between advanced robotics research and real-world applications. I&apos;m also interested in exploring the ethics of robots and their impact on human thriving.
