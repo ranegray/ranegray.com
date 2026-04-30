@@ -1,52 +1,38 @@
 export type Project = {
-  slug: string;
+  repo: string;
+  href: string;
   title: string;
   subtitle: string;
   timeframe: string;
   summary: string;
-  tags: string[];
-  highlights: string[];
 };
 
 export const projects: Project[] = [
   {
-    slug: "xlerobot-platform",
-    title: "xLeRobot Platform",
-    subtitle: "Computer Vision + Object Grasping",
-    timeframe: "Dec 2025 - Present",
+    repo: "ranegray/pincer",
+    href: "https://github.com/ranegray/pincer",
+    title: "Pincer",
+    subtitle: "Vision-to-grasping pipeline for low-cost robotic hardware",
+    timeframe: "2026 - Present",
     summary:
-      "RGB-D perception-to-grasp pipeline for a 6-DoF arm using Intel RealSense, point-cloud filtering, and kinematics-aware motion commands.",
-    tags: ["RGB-D", "Intel RealSense", "Point Clouds", "Pinocchio", "PINK"],
-    highlights: [
-      "Built an RGB-D perception-to-grasp pipeline with Intel RealSense to localize objects and execute grasps on a 6-DoF arm.",
-      "Implemented point-cloud filtering and segmentation to produce stable grasp targets under clutter, noise, and lighting variation.",
-      "Leveraged Pinocchio and PINK for forward and inverse kinematics to convert camera-frame targets into arm-frame motion commands.",
-    ],
+      "A perception-to-manipulation system built on xLeRobot hardware with RGB-D sensing, camera-to-base transforms, and task-based inverse kinematics.",
   },
   {
-    slug: "irobot-create-3",
-    title: "iRobot Create 3",
-    subtitle: "ROS 2 Navigation + Mapping",
-    timeframe: "June 2025",
+    repo: "ranegray/ros2-racer",
+    href: "https://github.com/ranegray/ros2-racer",
+    title: "ROS2 Racer",
+    subtitle: "Autonomy stack and telemetry dashboard for a small racecar",
+    timeframe: "2026",
     summary:
-      "ROS 2 navigation stack on Raspberry Pi 4 with RPLidar integration, 2D SLAM, and repeatable occupancy-map generation in RViz.",
-    tags: ["ROS 2", "Raspberry Pi 4", "RPLidar A1M8", "SLAM", "RViz"],
-    highlights: [
-      "Built a ROS 2 stack on Raspberry Pi 4 for the Create 3, integrating RPLidar A1M8 and publishing LiDAR scans for downstream mapping and localization.",
-      "Implemented 2D SLAM and validated mapping in RViz, producing consistent occupancy maps across multiple indoor environments.",
-    ],
+      "A modular ROS 2 workspace for autonomous racing experiments with sensor bringup, reactive navigation, and a live telemetry dashboard.",
   },
   {
-    slug: "mobile-robot-rl",
-    title: "Mobile Robot RL",
-    subtitle: "Gymnasium + Q-Learning",
-    timeframe: "Nov 2025",
+    repo: "ranegray/webots_rl",
+    href: "https://github.com/ranegray/webots_rl",
+    title: "Webots RL",
+    subtitle: "Q-learning controller for e-puck track navigation",
+    timeframe: "2025",
     summary:
-      "Tabular Q-learning workflow in Webots for an e-puck robot, covering reward shaping, hyperparameter tuning, and repeated-trial evaluation.",
-    tags: ["Webots", "Gymnasium", "Q-Learning", "e-puck", "Reinforcement Learning"],
-    highlights: [
-      "Implemented tabular Q-learning from scratch in Webots with a Gymnasium-style training loop to train an e-puck to navigate a track.",
-      "Defined state and action spaces, shaped rewards, tuned hyperparameters, and evaluated performance across repeated trials.",
-    ],
+      "A reinforcement learning experiment in Webots that trains an e-puck to navigate a track using discretized infrared observations and reward shaping.",
   },
 ];

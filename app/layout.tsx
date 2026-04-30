@@ -1,22 +1,32 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
-
-const dmSerif = DM_Serif_Display({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-heading",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-});
+import Footer from "./components/Footer";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "rane gray",
-  description: "i build robots.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: "Rane Gray",
+    template: "%s | Rane Gray",
+  },
+  description: site.description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Rane Gray",
+    description: site.description,
+    url: site.url,
+    siteName: site.name,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rane Gray",
+    description: site.description,
+  },
 };
 
 export default function RootLayout({
@@ -25,10 +35,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSerif.variable} ${geistMono.variable}`}>
-      <body className="font-[family-name:var(--font-mono)] min-h-screen">
+    <html lang="en">
+      <body>
         <Navigation />
-        <main className="max-w-[680px] mx-auto px-6 py-12">{children}</main>
+        <main className="mx-auto w-full max-w-3xl flex-1 px-6 pb-10 pt-8 sm:px-8">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

@@ -1,33 +1,37 @@
 import Link from "next/link";
+import { site } from "@/lib/site";
 
 export default function Navigation() {
   return (
-    <nav className="max-w-[680px] mx-auto px-6 pt-8 pb-4 flex justify-between items-center">
+    <nav className="mx-auto flex w-full max-w-3xl items-center justify-between gap-4 px-6 pb-4 pt-10 sm:px-8">
       <Link
         href="/"
-        className="text-fg hover:text-accent-gold transition-colors font-[family-name:var(--font-heading)] text-lg"
+        className="font-[family-name:var(--font-heading)] text-xl text-fg transition-colors hover:text-accent-gold"
       >
-        rane gray
+        {site.name}
       </Link>
-      <div className="flex gap-6 text-sm">
+
+      <div className="flex flex-wrap items-center gap-5 text-sm">
         <Link
-          href="/writing"
-          className="text-fg-dim hover:text-fg transition-colors"
+          href="/#research"
+          className="text-fg-dim transition-colors hover:text-fg"
         >
-          writing
+          Research
         </Link>
         <Link
-          href="/projects"
-          className="text-fg-dim hover:text-fg transition-colors"
+          href="/#projects"
+          className="text-fg-dim transition-colors hover:text-fg"
         >
-          projects
+          Projects
         </Link>
-        <Link
-          href="/about"
-          className="text-fg-dim hover:text-fg transition-colors"
+        <a
+          href="https://github.com/ranegray"
+          target="_blank"
+          rel="noreferrer"
+          className="text-fg-dim transition-colors hover:text-fg"
         >
-          about
-        </Link>
+          GitHub
+        </a>
       </div>
     </nav>
   );
