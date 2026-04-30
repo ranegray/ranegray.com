@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local image working files
+.codex-tmp/
+.tmp/
+public/images/hero.png
+public/images/hero-v2.png
+public/images/hero-abstract.png
+public/images/pincer.png
+public/images/pincer-v2.png
+public/images/ros2-racer.png
+public/images/ros2-racer-v2.png
+public/images/webots-rl.png
+public/images/webots-rl-v2.png
+public/images/webots-rl-v3.png
